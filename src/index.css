@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.logo {
+  border: 1px white;
+  border-radius: 10px;
+}
+
+.navbar-r {
+  padding: 6px 0px !important;
+}
+
+.text-purple {
+  color: rgb(122, 54, 250);
+}
+
+.text-pink {
+  color: #d63384;
+}
+
+.container1400 {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Sidebar overlay behavior for mobile */
+.sidebar-overlay {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sidebar-overlay {
+    display: block !important;
+    position: static;
+    z-index: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1051;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+  }
+
+  .sidebar-overlay.show {
+    display: block;
+    transform: translateX(0);
+  }
+
+  /* Backdrop behind the sidebar */
+  .mobile-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1050;
+  }
+}
+
+
+
+.main {
+  background-color: #367dfa17;
+  height: 35vw;
+  width: 100%;
+}
+@media (max-width:767px) {
+  .main{
+    height: 130vw;
+  }
+  
+}
+
+.bg-primary-custome{
+   background-color: #063ca324 !important; /* custom blue transparent */
+  color: #063ca3 !important;
+  font-weight: 500;
+}
+@media (min-width:767px) {
+  .show-mobile{
+    display: none;
+  }
+  
+}
